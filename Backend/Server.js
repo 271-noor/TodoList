@@ -10,7 +10,7 @@ const app = express();
 const PORT = process.env.PORT || 5000; //agr process.env.PORT h to oose use kro nhi 5000 ko use kro
 
 // Middleware
-app.use(express.json()); //body me json ko pars kr paenge, koi alg se json parser krne ki jrurt nhi pdegi ye express ka built in feature h
+app.use(express.json()); //body me json ko pars kr paenge, ye express ka built in feature h
 
 app.use(cors()); //isse hmari cors origin request handle ho jaegi
 
