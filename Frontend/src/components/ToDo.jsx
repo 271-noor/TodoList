@@ -22,11 +22,11 @@ const UpdateToDo = () => {
 
   return (
     <>
-     <div className="todo">
+     <div className="todo text-white flex mx-8 my-2">
         {text}
-        <div className="icons">
-            <AiFillEdit className='icon' onClick={UpdateToDo} />
-            <MdDelete className='icon' onClick={deleteToDo} />
+        <div className="icons flex my-1 mx-24 font-bold ">
+            <AiFillEdit className='px-1 py-1 mx-2' onClick={UpdateToDo} />
+            <MdDelete className='px-1 py-1' onClick={deleteToDo} />
         </div>    
     </div> 
     </>

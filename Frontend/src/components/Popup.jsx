@@ -20,7 +20,7 @@ const updateToDo = () => {
 
   return (
     <>
-      <div className="backdrop">
+      <div className="backdrop text-white">
         <div className="popup">
             <RxCross2 className='cross' onClick={() =>setShowPopup(false)} />
             <h1>UpdateToDo</h1>

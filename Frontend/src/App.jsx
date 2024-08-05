@@ -33,28 +33,28 @@ const App = () => {
 
   return (
     <>
-    <div className="items-center justify-center flex my-2">
+    <div className="items-center text-white justify-center flex my-2">
       <div >
-        <h1 className="text-3xl text-white font-bold text-center">ToDo App</h1>
+        <h1 className="text-3xl  font-bold text-center">ToDo App</h1>
 
-        <div className="my-4 text-white ">
+        <div className="my-4">
         <input
                 value= {input}
                 onChange={(e) => setInput(e.target.value)} 
                 type="text"  
                 placeholder='Add a ToDo...'
-                className=' bg-gray-600 shadow-lg rounded-lg
-                  px-2 py-1 mx-4'
+                className=' bg-gray-600 shadow-lg rounded-md
+                  px-4 py-2 mx-4'
             />
           <button 
           onClick={saveToDo}
-          className='bg-gray-600 shadow-lg rounded-lg font-bold px-3 py-1'
+          className='bg-gray-600 shadow-lg rounded-md font-bold px-4 py-2'
           >
             Add
           </button>
         </div>
 
-        <div className="list"> 
+        <div className=" font-bold flex "> 
           {
             toDos.map(el => 
             <ToDo  
@@ -68,12 +68,15 @@ const App = () => {
           }
         </div>
       </div>
-      {showPopup &&     //yaha pe conditional rendering kiye h.
+     <div className='flex'>
+     {showPopup &&     //yaha pe conditional rendering kiye h.
       <Popup                //agr popup ki value true h to isko show krna.
+      className=""
       setShowPopup={setShowPopup} 
       popupContent={popupContent}
       setUpdateUI={setUpdateUI}
       /> }
+     </div>
     </div>
      
     </>
