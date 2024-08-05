@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { RxCross2 } from "react-icons/rx";
 import { baseURL } from '../utils/Constant';
-import ToDo from './ToDo';
+
 
 const Popup = ({setShowPopup, popupContent, setUpdateUI}) => {
 
@@ -10,7 +10,7 @@ const [input, setInput] = useState(popupContent.text)
 
 
 const updateToDo = () => {
-    axious.put(`${baseURL}/update/${popupContent.id}`, {ToDo: input})
+    axious.put(`${baseURL}/update/${popupContent.id}`, {toDo: input})
     .then((res) => {
         console.log(res.data)
         setUpdateUI((prevState) => !prevState)
