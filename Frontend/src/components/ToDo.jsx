@@ -2,6 +2,7 @@ import React from 'react'
 import { AiFillEdit } from "react-icons/ai";
 import { MdDelete } from "react-icons/md";
 import { baseURL } from '../utils/Constant';
+import axios from 'axios';
 
 const ToDo = ({ text, id, setUpdateUI, setShowPopup, setPopupContent }) => {
 
@@ -22,11 +23,11 @@ const UpdateToDo = () => {
 
   return (
     <>
-     <div className="todo text-white flex mx-8 my-2">
+     <div className="todo text-white flex mx-6 my-3">
         {text}
-        <div className="icons flex my-1 mx-24 font-bold ">
-            <AiFillEdit className='px-1 py-1 mx-2' onClick={UpdateToDo} />
-            <MdDelete className='px-1 py-1' onClick={deleteToDo} />
+        <div className="icons flex my-1 mx-auto font-bold cursor-pointer ">
+            <AiFillEdit className=' -px-4 -py-4 mx-4 ' onClick={UpdateToDo} />
+            <MdDelete className='-px-4 -py-4' onClick={deleteToDo} />
         </div>    
     </div> 
     </>

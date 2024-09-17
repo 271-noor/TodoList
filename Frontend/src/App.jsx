@@ -33,7 +33,7 @@ const App = () => {
 
   return (
     <>
-    <div className="items-center text-white justify-center flex my-2">
+    <div className="items-center text-white justify-center flex my-3">
       <div >
         <h1 className="text-3xl  font-bold text-center">ToDo App</h1>
 
@@ -54,7 +54,7 @@ const App = () => {
           </button>
         </div>
 
-        <div className=" font-bold flex "> 
+        <div className=" font-bold "> 
           {
             toDos.map(el => 
             <ToDo  
@@ -68,7 +68,9 @@ const App = () => {
           }
         </div>
       </div>
-     <div className='flex'>
+    
+    </div>
+     <div className='items-center justify-center flex mt-10'>
      {showPopup &&     //yaha pe conditional rendering kiye h.
       <Popup                //agr popup ki value true h to isko show krna.
       className=""
@@ -77,7 +79,6 @@ const App = () => {
       setUpdateUI={setUpdateUI}
       /> }
      </div>
-    </div>
      
     </>
   )
